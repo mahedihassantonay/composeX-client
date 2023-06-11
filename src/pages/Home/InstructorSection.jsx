@@ -9,7 +9,7 @@ const InstructorSection = () => {
     const [courses, setCourses] = useState([])
 
     useEffect(()=>{
-        fetch('course.json')
+        fetch('http://localhost:5000/classes')
         .then(res=>res.json())
         .then(data=>setCourses(data))
     },[])
