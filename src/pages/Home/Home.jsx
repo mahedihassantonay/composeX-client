@@ -1,6 +1,7 @@
 import Banner from "./Banner";
 import 'swiper/css';
 import PopularClasses from "./PopularClasses";
+import InstructorSection from "./InstructorSection";
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner />
             <PopularClasses />
+            <InstructorSection />
         </div>
     );
 };

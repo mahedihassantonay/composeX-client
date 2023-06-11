@@ -12,7 +12,7 @@ const ClassesCard = ({course}) => {
     <p><span className="text-lg font-semibold">Cpurse Fee:</span> ${price}</p>
     
     <div className="card-actions justify-center">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn bg-black text-white">Buy Now</button>
     </div>
   </div>
 </div>
