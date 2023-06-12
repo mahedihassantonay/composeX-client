@@ -21,7 +21,7 @@ const PopularClasses = () => {
 
       <div className="grid grid-cols-3 gap-4 my-8">
         {
-            courses.map(course=> <ClassesCard key={course.id} course={course} />)
+            courses.map(course=> <ClassesCard key={course._id} course={course} />)
         }
       </div>
     </div>

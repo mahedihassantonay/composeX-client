@@ -35,7 +35,7 @@ const InstructorSection = () => {
       >
         {
             courses.map(course=> (
-                <SwiperSlide key={course.key}>
+                <SwiperSlide key={course._id}>
             <div className="h-96">
             <img className="h-96" src={course.image2} alt="" />
             

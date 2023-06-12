@@ -5,7 +5,9 @@ import {
 import Dashboard from "../layout/Dashboard";
 import Main from "../layout/Main";
 import Classes from "../pages/Classes/Classes";
+import AddClass from "../pages/Dashboard/AddClass";
 import ManageUsers from "../pages/Dashboard/ManageUsers";
+import MyClasses from "../pages/Dashboard/MyClasses";
 import MySelectedClass from "../pages/Dashboard/MySelectedClass";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         {
           path: 'manageusers',
           element: <ManageUsers />
+        },
+        {
+          path: 'addclass',
+          element: <AddClass />
+        },
+        {
+          path: 'myclasses',
+          element: <MyClasses />
         }
       ]
     }

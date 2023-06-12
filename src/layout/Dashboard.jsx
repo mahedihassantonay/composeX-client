@@ -62,7 +62,7 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/myclasses">
+                  <NavLink to="/dashboard/myclasses">
                     {" "}
                     <AiOutlineAudit /> My Classes
                   </NavLink>
