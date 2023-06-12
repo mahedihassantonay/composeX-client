@@ -1,12 +1,15 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const Login = () => {
-    const {signIn} = useAuth()
-    const [error, setError] = useState('')
+    const {signIn, signInWithGoogle} = useAuth()
+    // const [error, setError] = useState('')
     const navigate = useNavigate()
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
+
     const {
         register,
         handleSubmit,
@@ -22,6 +25,34 @@ const Login = () => {
         })
        
       }
+
+
+      const  handleGoogleSignIn = ()=>{
+        signInWithGoogle()
+        .then(result=>{
+            const loggedInUser = result.user;
+            console.log(loggedInUser)
+
+            const saveUsers = {name: loggedInUser.displayName, email:loggedInUser.email}
+
+            fetch('http://localhost:5000/users',{
+                method: 'POST',
+                headers:{
+                  'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUsers)
+              })
+              .then(res=>res.json())
+              .then(()=>{
+                
+                  console.log('user profile updated')
+              navigate('/')
+                
+              })
+
+            navigate(from, {replace: true})
+        })
+    }
     return (
         <>
          <div className="hero min-h-screen bg-base-200">
@@ -80,6 +111,10 @@ const Login = () => {
                 />
               </div>
             </form>
+
+            <div className="text-center">
+              <button onClick={handleGoogleSignIn} className="btn btn-small btn-outline">G</button>
+            </div>
             <div className="text-center pb-4">
               <small>
                 New to this Page !{" "}

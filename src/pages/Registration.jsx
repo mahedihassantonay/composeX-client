@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const Registration = () => {
     const {registerUser, updateUserProfile} = useAuth()
+    const navigate = useNavigate()
+
     const {
         register,
         handleSubmit,
@@ -15,7 +17,25 @@ const Registration = () => {
         .then(result=>{
             console.log(result.user)
             updateUserProfile(data.name, data.photoURL)
-            
+            .then(()=>{
+              const dbUsers = {name: data.name, email:data.email}
+              fetch('http://localhost:5000/users',{
+                method: 'POST',
+                headers:{
+                  'content-type': 'application/json'
+                },
+                body: JSON.stringify(dbUsers)
+              })
+              .then(res=>res.json())
+              .then(data=>{
+                if(data.insertedId){
+                  console.log('user profile updated')
+                  navigate('/')
+                }
+              })
+              
+            })  
+            // reset
             .catch((error) => {
                 console.log(error)
             })

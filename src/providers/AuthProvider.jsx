@@ -1,20 +1,20 @@
 import {
-    createUserWithEmailAndPassword,
-    getAuth,
-    GoogleAuthProvider,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    signInWithPopup,
-    signOut,
-    updateProfile,
-  } from "firebase/auth";
-  import { createContext, useEffect, useState } from "react";
-  import app from "../firebase/firebase-config";
-  
-  export const AuthContext = createContext(null);
-  const auth = getAuth(app);
+  createUserWithEmailAndPassword,
+  getAuth,
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import app from "../firebase/firebase-config";
 
-const AuthProvider = ({children}) => {
+export const AuthContext = createContext(null);
+const auth = getAuth(app);
+
+const AuthProvider = ({ children }) => {
   const [user, setUser] = useState("");
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
@@ -30,7 +30,7 @@ const AuthProvider = ({children}) => {
   };
 
   const updateUserProfile = (user, name, photo) => {
-    updateProfile(user, {
+    return updateProfile(user, {
       displayName: name,
       photoURL: photo,
     })
@@ -42,10 +42,9 @@ const AuthProvider = ({children}) => {
       });
   };
 
-  const signInWithGoogle = ()=>{
-    return signInWithPopup(auth, googleProvider)
-  } 
-  
+  const signInWithGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
 
   const logOut = () => {
     setLoading(true);
@@ -70,7 +69,7 @@ const AuthProvider = ({children}) => {
     logOut,
     loading,
     updateUserProfile,
-    signInWithGoogle
+    signInWithGoogle,
   };
 
   return (
