@@ -51,7 +51,7 @@ const Classes = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {
-            alert("added suiccesfully");
+            alert("added successfully");
             setSelectedCourses([...selectedCourses, course._id]);
           } else {
             navigate("/login", { state: { from: location } });

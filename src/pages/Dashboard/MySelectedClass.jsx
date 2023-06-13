@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useSelectedClass from "../../hooks/useSelectedClass";
 
@@ -67,9 +68,11 @@ const MySelectedClass = () => {
                   >
                     Delete
                   </button>
-                  <button className="btn bg-black text-white hover;text-black">
+                  <Link to='/dashboard/classpayment'>
+                  <button className="btn bg-black text-white hover:text-black">
                     Pay
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>

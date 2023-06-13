@@ -15,7 +15,8 @@ const Dashboard = () => {
   const [isInstructor, isInstructorLoading] = useInstructor();
 
   if (isAdminLoading || isInstructorLoading) {
-    return <div>Loading...</div>;
+    return <span className="loading loading-spinner loading-lg"></span>
+    ;
   }
   return (
     <>
@@ -80,6 +81,12 @@ const Dashboard = () => {
                   <NavLink to="/dashboard/enrolledclass">
                     {" "}
                     <AiOutlineAudit /> My Enrolled Classes
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/dashboard/paymenthistory">
+                    {" "}
+                    <AiOutlineAudit /> Payment History
                   </NavLink>
                 </li>
               </>
