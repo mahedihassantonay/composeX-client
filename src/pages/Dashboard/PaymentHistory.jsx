@@ -15,14 +15,16 @@ const PaymentHistory = () => {
   }, [axiosSecure, user.email]);
 
   return (
-    <div>
-      <h1>Enrolled Classes</h1>
+    <div className="w-full px-12">
+            <h1 className="text-3xl font-bold my-12 underline">Payment History</h1>
+
       {enrolledClasses.map((course) => (
-        <div key={course._id}>
+        <div key={course._id} className='border mb-8 font-semibold'>
           <h2>Course Name: {course.className}</h2>
-          <p>{course.transactionId}</p>
-          <p>{course.date}</p>
-          <p>{course.price}</p>
+          <h2>Email: {course.email}</h2>
+          <p>Trans Id: {course.transactionId}</p>
+          <p className="bg-yellow-500">{course.date}</p>
+          <p>Paid - ${course.price}</p>
           
          
         </div>

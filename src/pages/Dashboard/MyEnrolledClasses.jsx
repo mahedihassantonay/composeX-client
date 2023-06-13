@@ -15,16 +15,19 @@ const MyEnrolledClasses = () => {
   }, [axiosSecure, user.email]);
 
   return (
-    <div>
-      <h1>Enrolled Classes</h1>
+    <div className="px-12">
+      <h1 className="text-3xl font-bold my-12 underline">My Enrolled Classes</h1>
       {enrolledClasses.map((course) => (
-        <div key={course._id}>
-          <h2>Course Name: {course.className}</h2>
-          <p>Avilable Seat: {course.availableSeats}</p>
-          
-          <img src={course.image} alt="" />
-          {/* Add other information about the enrolled class */}
-        </div>
+       <div key={course._id} className="hero  bg-base-200 mb-8">
+       <div className="hero-content flex-col lg:flex-row-reverse">
+         <img src={course.image} className="max-w-sm rounded-lg shadow-2xl" />
+         <div>
+           <h1 className="text-5xl font-bold">{course.className}</h1>
+           <p className="py-6"><span className="font-bold">Instructor:</span> {course.instructor} </p>
+           <button className="btn bg-black text-white hover:text-black"> Start</button>
+         </div>
+       </div>
+     </div>
       ))}
     </div>
   );

@@ -7,7 +7,7 @@ const Navbar = () => {
     const menuList = <>
     
     <li><Link>Home</Link></li>
-    <li><Link>Instructors</Link></li>
+    <li><Link to='/instructors'>Instructors</Link></li>
     <li><Link to='/classes'>Classes</Link></li>
     <li><Link to='/dashboard'>Dashboard</Link></li>
     

@@ -34,7 +34,7 @@ const Classes = () => {
         instructor: course.instructor,
         name: course.className,
         email: user?.email,
-        instructorImage: course.instractorImage,
+        instructorImage: course.instructorImage,
         seats: course.availableSeats
       };
       fetch("http://localhost:5000/selectedClasses", {
@@ -61,7 +61,7 @@ const Classes = () => {
         <div key={course.key} className="hero bg-base-200 flex flex-row">
           <div className="hero-content px-12">
             <img
-              src={course.image2}
+              src={course.image}
               className="max-w-sm rounded-lg shadow-2xl"
             />
           </div>

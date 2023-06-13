@@ -1,5 +1,7 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import "./CheckOutForm.css";
@@ -13,6 +15,7 @@ const CheckOutForm = ({price, courses}) => {
   const [clientSecret, setClientSecret] = useState("");
   const [axiosSecure] = useAxiosSecure();
   const [processing, setProcessing] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
@@ -76,6 +79,13 @@ const CheckOutForm = ({price, courses}) => {
     setProcessing(false);
     if (paymentIntent.status === "succeeded") {
       setTransactionId(paymentIntent.id);
+      Swal.fire(
+        'Great!',
+        'You have successfully enrolled this course',
+        'success'
+      )
+      navigate('/dashboard/enrolledclass')
+
       
       // save payment information to the server
       const payment = {
@@ -86,6 +96,7 @@ const CheckOutForm = ({price, courses}) => {
         quantity: courses.length,
         className: courses.map((c) => c.name),
         image: courses.map(c=>c.image),
+        instructor: courses.map(c=>c.instructor),
         availableSeats: courses.map(c=>c.seats),
         status: "service pending",
         courseItems: courses.map((c) => c._id),

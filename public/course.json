@@ -2,100 +2,108 @@
   {
    
     "className": "Introduction to Photography",
-    "image": "https://images.pexels.com/photos/17043049/pexels-photo-17043049/free-photo-of-close-up-of-cameras-and-accessories.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : " https://images.pexels.com/photos/16063273/pexels-photo-16063273/free-photo-of-vintage-camera-on-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "image" : " https://images.pexels.com/photos/16063273/pexels-photo-16063273/free-photo-of-vintage-camera-on-newspaper.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "instructor": "John Smith",
-    "instractorImage": "https://images.pexels.com/photos/5265000/pexels-photo-5265000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "instructorImage": "https://images.pexels.com/photos/5265000/pexels-photo-5265000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "availableSeats": 15,
     "enrolledStudent": "40",
+    "email": "smith@gmail.com",
+
     "price": 99.99
   },
   {
     
     "className": "Portrait Photography",
-    "image": "https://images.pexels.com/photos/16034193/pexels-photo-16034193/free-photo-of-an-old-photo-hanging-on-a-white-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : " https://images.pexels.com/photos/3988680/pexels-photo-3988680.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "image" : " https://images.pexels.com/photos/3988680/pexels-photo-3988680.jpeg?auto=compress&cs=tinysrgb&w=600",
     "instructor": "Jane Doe",
-    "instractorImage": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 10,
     "enrolledStudent": "50",
+    "email": "jane@gmail.com",
+
     "price": 149.99
   },
   {
     
     "className": "Landscape Photography",
-    "image": "https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/3570038/pexels-photo-3570038.jpeg?auto=compress&cs=tinysrgb&w=600 ",
+    "image" : "https://images.pexels.com/photos/3570038/pexels-photo-3570038.jpeg?auto=compress&cs=tinysrgb&w=600 ",
     "instructor": "Michael Johnson",
-    "instractorImage": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 8,
     "enrolledStudent": "70",
+    "email": "mic@gmail.com",
+
     "price": 199.99
   },
   {
     
     "className": "Street Photography",
-    "image": "https://images.pexels.com/photos/1474157/pexels-photo-1474157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : " https://images.pexels.com/photos/3646171/pexels-photo-3646171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "image" : " https://images.pexels.com/photos/3646171/pexels-photo-3646171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "instructor": "Emily Davis",
-    "instractorImage": "https://images.pexels.com/photos/2906807/pexels-photo-2906807.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/2906807/pexels-photo-2906807.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 12,
     "enrolledStudent": "30",
+    "email": "emily@gmail.com",
+
     "price": 129.99
   },
   {
     
     "className": "Wildlife Photography",
-    "image": "https://images.pexels.com/photos/1829979/pexels-photo-1829979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/1912176/pexels-photo-1912176.jpeg?auto=compress&cs=tinysrgb&w=600 ",
+    "image" : "https://images.pexels.com/photos/1912176/pexels-photo-1912176.jpeg?auto=compress&cs=tinysrgb&w=600 ",
     "instructor": "Robert Wilson",
-    "instractorImage": "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 5,
     "enrolledStudent": "45",
+    "email": "robert@gmail.com",
+
     "price": 249.99
   },
   {
     
     "className": "Studio Lighting Techniques",
-    "image": "https://images.pexels.com/photos/53265/pexels-photo-53265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/395085/pexels-photo-395085.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "image" : "https://images.pexels.com/photos/395085/pexels-photo-395085.jpeg?auto=compress&cs=tinysrgb&w=600",
     "instructor": "Sarah Thompson",
-    "instractorImage": "https://images.pexels.com/photos/15788298/pexels-photo-15788298/free-photo-of-woman-posing-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/15788298/pexels-photo-15788298/free-photo-of-woman-posing-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 7,
     "enrolledStudent": "32",
+    "email": "sarah@gmail.com",
+
     "price": 179.99
   },
   {
     
     "className": "Travel Photography",
-    "image": "https://images.pexels.com/photos/3217911/pexels-photo-3217911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/4390580/pexels-photo-4390580.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "image" : "https://images.pexels.com/photos/4390580/pexels-photo-4390580.jpeg?auto=compress&cs=tinysrgb&w=600",
     "instructor": "David Anderson",
-    "instractorImage": "https://images.pexels.com/photos/2866073/pexels-photo-2866073.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/2866073/pexels-photo-2866073.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 9,
     "enrolledStudent": "80",
+    "email": "david@gmail.com",
+
     "price": 159.99
   },
   {
     
     "className": "Photo Editing and Retouching",
-    "image": "https://images.pexels.com/photos/7014932/pexels-photo-7014932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/7610451/pexels-photo-7610451.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "image" : "https://images.pexels.com/photos/7610451/pexels-photo-7610451.jpeg?auto=compress&cs=tinysrgb&w=600",
     "instructor": "Jessica Martinez",
-    "instractorImage": "https://images.pexels.com/photos/2746187/pexels-photo-2746187.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/2746187/pexels-photo-2746187.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 6,
     "enrolledStudent": "66",
+    "email": "jessica@gmail.com",
+
     "price": 189.99
   },
   {
     
     "className": "Fashion Photography",
-    "image": "https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "image2" : "https://images.pexels.com/photos/2887766/pexels-photo-2887766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
+    "image" : "https://images.pexels.com/photos/2887766/pexels-photo-2887766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ",
     "instructor": "Thomas Wright",
-    "instractorImage": "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "instructorImage": "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 11,
     "enrolledStudent": "92",
+    "email": "thomas@gmail.com",
     "price": 139.99
   }
  

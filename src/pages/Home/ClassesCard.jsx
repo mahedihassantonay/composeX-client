@@ -1,10 +1,10 @@
 
 const ClassesCard = ({course}) => {
-    const {image2, className, availableSeats, instructor } = course;
+    const {image, className, availableSeats, instructor } = course;
     return (
         <>
             <div className="card w-96 bg-base-100 shadow-xl ">
-  <figure><img className="h-96 w-full" src={image2} alt="Shoes" /></figure>
+  <figure><img className="h-96 w-full" src={image} alt="Shoes" /></figure>
   <div className="card-body text-center">
     <p className="text-center text-yellow-600">{availableSeats} Seat Remaining</p>
     <h2 className="text-xl font-semibold">{className}</h2>

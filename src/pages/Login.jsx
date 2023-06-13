@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const Login = () => {
     const {signIn, signInWithGoogle} = useAuth()
-    // const [error, setError] = useState('')
+    const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation();
 
@@ -21,7 +22,12 @@ const Login = () => {
         .then(result=>{
             const user = result.user;
             console.log(user)
-            navigate('/')
+            setError('')
+            navigate(from)
+        })
+        .catch((error) => {
+          console.log(error.message)
+          setError(error)
         })
        
       }
@@ -58,7 +64,7 @@ const Login = () => {
          <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex flex-col">
           
-            <h1 className="text-5xl font-bold">Please Sign Up Here !!</h1>
+            <h1 className="text-5xl font-bold">Please Login Here !!</h1>
            
           
           <div className="card  w-full shadow-2xl bg-base-100">
@@ -96,7 +102,7 @@ const Login = () => {
                   })}
                   required
                 />
-                {errors && (
+                {error && (
                   <p className="text-red-500">Email/password is invalid</p>
                 )}
                

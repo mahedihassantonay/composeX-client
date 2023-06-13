@@ -36,7 +36,7 @@ const ManageClasses = () => {
               <div className="card-body items-center text-center">
                 <h2 className="card-title">{c.className}</h2>
                 <p>Instructor: {c.instructor}</p>
-                <p>Email: {c.instructorEmail}</p>
+                <p>Email: {c.email}</p>
                 <p>Available Seats: {c.availableSeats}</p>
                 <p>Price: {c.price}</p>
                 <p>Status: {c.status}</p>
