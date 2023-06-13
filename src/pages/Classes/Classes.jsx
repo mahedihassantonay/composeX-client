@@ -1,21 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import useCourses from "../../hooks/useCourses";
 
 const Classes = () => {
-  const [courses, setCourses] = useState([]);
+  const [courses] = useCourses()
   const [selectedCourses, setSelectedCourses] = useState([]);
 
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/classes")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
-  console.log(courses);
+  
 
   useEffect(() => {
     if (user && user.email) {
@@ -65,7 +61,7 @@ const Classes = () => {
         <div key={course.key} className="hero bg-base-200 flex flex-row">
           <div className="hero-content px-12">
             <img
-              src={course.image}
+              src={course.image2}
               className="max-w-sm rounded-lg shadow-2xl"
             />
           </div>

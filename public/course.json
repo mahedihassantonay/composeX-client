@@ -7,6 +7,7 @@
     "instructor": "John Smith",
     "instractorImage": "https://images.pexels.com/photos/5265000/pexels-photo-5265000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "availableSeats": 15,
+    "enrolledStudent": "40",
     "price": 99.99
   },
   {
@@ -17,6 +18,7 @@
     "instructor": "Jane Doe",
     "instractorImage": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 10,
+    "enrolledStudent": "50",
     "price": 149.99
   },
   {
@@ -27,6 +29,7 @@
     "instructor": "Michael Johnson",
     "instractorImage": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 8,
+    "enrolledStudent": "70",
     "price": 199.99
   },
   {
@@ -37,6 +40,7 @@
     "instructor": "Emily Davis",
     "instractorImage": "https://images.pexels.com/photos/2906807/pexels-photo-2906807.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 12,
+    "enrolledStudent": "30",
     "price": 129.99
   },
   {
@@ -47,6 +51,7 @@
     "instructor": "Robert Wilson",
     "instractorImage": "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 5,
+    "enrolledStudent": "45",
     "price": 249.99
   },
   {
@@ -57,6 +62,7 @@
     "instructor": "Sarah Thompson",
     "instractorImage": "https://images.pexels.com/photos/15788298/pexels-photo-15788298/free-photo-of-woman-posing-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 7,
+    "enrolledStudent": "32",
     "price": 179.99
   },
   {
@@ -67,6 +73,7 @@
     "instructor": "David Anderson",
     "instractorImage": "https://images.pexels.com/photos/2866073/pexels-photo-2866073.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 9,
+    "enrolledStudent": "80",
     "price": 159.99
   },
   {
@@ -77,6 +84,7 @@
     "instructor": "Jessica Martinez",
     "instractorImage": "https://images.pexels.com/photos/2746187/pexels-photo-2746187.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 6,
+    "enrolledStudent": "66",
     "price": 189.99
   },
   {
@@ -87,6 +95,7 @@
     "instructor": "Thomas Wright",
     "instractorImage": "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=600",
     "availableSeats": 11,
+    "enrolledStudent": "92",
     "price": 139.99
   }
  

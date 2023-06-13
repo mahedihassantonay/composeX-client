@@ -1,16 +1,10 @@
-import { useEffect, useState } from "react";
 import ClassesCard from "./ClassesCard";
 import { Fade, Slide  } from "react-awesome-reveal";
+import useCourses from "../../hooks/useCourses";
 
 const PopularClasses = () => {
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/classes")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
-  }, []);
-  console.log(courses);
+  const [courses] = useCourses()
+ 
   return (
     <div className="my-20">
       <div className="text-center">

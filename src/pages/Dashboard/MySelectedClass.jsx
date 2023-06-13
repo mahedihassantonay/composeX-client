@@ -61,7 +61,7 @@ const MySelectedClass = () => {
                 <p className="py-6 text-yellow-600">
                   Available Seat: {course.seats}
                 </p>
-                <div>
+                <div className="flex justify-center gap-12">
                   <button
                     onClick={() => handleDelete(course)}
                     className="btn bg-black text-white hover:text-black"

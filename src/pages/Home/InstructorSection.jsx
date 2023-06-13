@@ -5,17 +5,10 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { useEffect, useState } from "react";
+import useCourses from "../../hooks/useCourses";
 const InstructorSection = () => {
 
-    const [courses, setCourses] = useState([])
-
-    useEffect(()=>{
-        fetch('http://localhost:5000/classes')
-        .then(res=>res.json())
-        .then(data=>setCourses(data))
-    },[])
-    console.log(courses)
+   const [courses] = useCourses()
     return (
         <div>
              <div className="text-center">
