@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from '../../assets/banner/1.jpg'
+import img1 from '../../assets/banner/1.png'
 
 
 
@@ -22,20 +22,16 @@ const Banner = () => {
         <img src={img1} alt="" />
       </div>
       <div>
-        <h3>2</h3>
+      <img src="https://i.ibb.co/QvMKYng/Capture-Your-Creativity-2.png" alt="" />
       </div>
       <div>
-        <h3>3</h3>
+        <img src="https://i.ibb.co/j6KcVLZ/Capture-Your-Creativity-3.png" alt="" />
       </div>
       <div>
-        <h3>4</h3>
+        <img src="https://i.ibb.co/X7qmqhW/Capture-Your-Creativity-4.png" alt="" />
       </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+      
+     
     </Slider>
        </>
         
