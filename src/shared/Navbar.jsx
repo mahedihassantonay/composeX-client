@@ -70,7 +70,7 @@ const handleSignOut = () => {
                 </ul>
               </div>
             ) : (
-              <div className="bg-red-400 p-2 rounded font-semibold text-white hover:bg-transparent">
+              <div className="bg-yellow-600 p-2 rounded font-semibold text-white hover:bg-transparent">
                 <Link to="/login">Login</Link>
               </div>
             )}

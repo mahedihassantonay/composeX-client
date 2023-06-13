@@ -9,7 +9,7 @@ const MyClasses = () => {
 
     useEffect(() => {
         if (user?.email) {
-          fetch(`http://localhost:5000/classes/${user.email}`)
+          fetch(`http://localhost:5000/classes/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
               setClasses(data);
@@ -35,7 +35,7 @@ const MyClasses = () => {
     return (
         
     <div className="w-full text-center px-12">
-      <h1 className="text-3xl font-bold my-8">My Classes</h1>
+      <h1 className="text-3xl font-bold my-8 underline">My Classes</h1>
       <div className="grid grid-cols-2 gap-12">
         {
             classes.map(c=> (
@@ -45,7 +45,7 @@ const MyClasses = () => {
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">{c.className}</h2>
-    <p>Total Enrolled Stident :  0</p>
+    <p className="text-yellow-600"> {c.availableSeats} Seats Available</p>
 
     {c.status === "denied" && (
                 <p className="text-red-500">

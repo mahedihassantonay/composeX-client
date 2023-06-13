@@ -1,9 +1,12 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AddClass = () => {
   const { user } = useAuth();
+  const navigate = useNavigate()
 
   const {
     register,
@@ -21,7 +24,12 @@ const AddClass = () => {
       .then((result) => {
         console.log(result);
         if (result.insertedId) {
-          alert('added')
+          Swal.fire(
+            'Good job!',
+            'You have successfully added a class',
+            'success'
+          )
+          navigate('/dashboard/myclasses')
         }
       });
     console.log(data);
@@ -83,8 +91,8 @@ const AddClass = () => {
             />
           </div>
 
-           {/* Available seats */}
-           <div className="form-control w-full">
+          {/* Available seats */}
+          <div className="form-control w-full">
             <label className="label">
               <span className="label-text text-xl font-semibold">
                 Available Seats*
@@ -114,6 +122,20 @@ const AddClass = () => {
               readOnly
             />
           </div>
+          {/* instructor image*/}
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text text-xl font-semibold">
+                Instructor Iamge
+              </span>
+            </label>
+            <input
+              type="text"
+              placeholder="image url"
+              className="input input-bordered w-full"
+              {...register("instructorImage", { required: true })}
+            />
+          </div>
           {/* instructor email */}
           <div className="form-control w-full ">
             <label className="label">
@@ -126,12 +148,16 @@ const AddClass = () => {
               placeholder="email"
               defaultValue={user?.email}
               className="input input-bordered w-full "
-              {...register("instructorEmail", { required: true })}
+              {...register("email", { required: true })}
               readOnly
             />
           </div>
 
-          <input type="submit" className="btn bg-black text-white font-bold hover:text-black  mt-4" value="Add Class" />
+          <input
+            type="submit"
+            className="btn bg-black text-white font-bold hover:text-black  mt-4"
+            value="Add Class"
+          />
         </form>
       </div>
     </div>

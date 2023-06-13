@@ -69,7 +69,7 @@ const Login = () => {
           
           <div className="card  w-full shadow-2xl bg-base-100">
             {/* form */}
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body -mb-4">
          
 
               {/* email */}
@@ -119,7 +119,7 @@ const Login = () => {
             </form>
 
             <div className="text-center">
-              <button onClick={handleGoogleSignIn} className="btn btn-small btn-outline">G</button>
+              <button onClick={handleGoogleSignIn} className="btn bg-black text-white btn-outline">G</button>
             </div>
             <div className="text-center pb-4">
               <small>
