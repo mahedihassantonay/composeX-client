@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,10 +19,14 @@ const InstructorSection = () => {
     return (
         <div>
              <div className="text-center">
-        <h3 className="text-blue-700 font-semibold tracking-wider">
-          COURSE CATEGORIES
-        </h3>
-        <h1 className="text-4xl font-bold py-4">Meet Our Instructors</h1>
+        <Slide>
+          <h3 className="text-yellow-600 font-semibold tracking-wider">
+            COURSE CATEGORIES
+          </h3>
+        </Slide>
+        <Fade delay={1e3} cascade damping={1e-1} className='text-4xl font-bold py-4'>
+          Meet Our Instructors
+        </Fade>
       </div>
 
        <div className=" my-12">
@@ -37,15 +43,13 @@ const InstructorSection = () => {
             courses.map(course=> (
                 <SwiperSlide key={course._id}>
             <div className="h-96">
-            <img className="h-96" src={course.image2} alt="" />
+            <img className="h-96" src={course.instractorImage} alt="" />
             
-            <div className="bg-black bg-opacity-20 absolute top-0 w-full">
+            <div className="bg-black bg-opacity-20 absolute top-0">
                 <h1 className="text-white p-4 font-bold">{course.className}</h1>
             </div>
-            <div className="bg-black bg-opacity-20 absolute top-1/2 w-full">
-                <h1 className="text-white p-4 font-bold">Number Of Students in the class:</h1>
-            </div>
-            <div className="bg-black bg-opacity-20 absolute bottom-0 w-full">
+            
+            <div className="bg-black bg-opacity-20 absolute bottom-0 ">
                 <h1 className="text-white p-4 font-bold">Instructor:{course.instructor}</h1>
             </div>
             </div>
