@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
 import useAuth from "../../hooks/useAuth";
 import useCourses from "../../hooks/useCourses";
+import useInstructor from "../../hooks/useInstructor";
 
 const Classes = () => {
-  const [courses] = useCourses()
+  const [courses] = useCourses();
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
 
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-
-  
 
   useEffect(() => {
     if (user && user.email) {
@@ -35,7 +37,7 @@ const Classes = () => {
         name: course.className,
         email: user?.email,
         instructorImage: course.instructorImage,
-        seats: course.availableSeats
+        seats: course.availableSeats,
       };
       fetch("http://localhost:5000/selectedClasses", {
         method: "POST",
@@ -58,7 +60,12 @@ const Classes = () => {
   return (
     <div className="grid gap-8 m-12">
       {courses.map((course) => (
-        <div key={course.key} className="hero bg-base-200 flex flex-row">
+        <div
+          key={course.key}
+          className={`hero bg-base-200 flex flex-row ${
+            course.availableSeats === '0' ? "bg-red-500" : ""
+          }`}
+        >
           <div className="hero-content px-12">
             <img
               src={course.image}
@@ -81,9 +88,18 @@ const Classes = () => {
               <Link to="/dashboard/selectedclass">
                 <button
                   onClick={() => handleSelectedClass(course)}
-                  className="btn bg-black text-white hover:text-black"
+                  className={`btn bg-black text-white ${
+                    course.availableSeats === 0 || isAdmin || isInstructor
+                      ? "cursor-not-allowed"
+                      : "hover:text-black"
+                  }`}
+                  disabled={
+                    course.availableSeats === 0 || isAdmin || isInstructor
+                  }
                 >
-                  Select
+                  {course.availableSeats === 0
+                    ? "No Seats Available"
+                    : "Select"}
                 </button>
               </Link>
             )}

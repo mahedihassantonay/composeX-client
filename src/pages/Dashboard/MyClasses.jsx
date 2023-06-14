@@ -46,6 +46,9 @@ const MyClasses = () => {
   <div className="card-body items-center text-center">
     <h2 className="card-title">{c.className}</h2>
     <p className="text-yellow-600"> {c.availableSeats} Seats Available</p>
+    
+    {/* TODO */}
+    <p> Total Enrolled Std: 0</p>
 
     {c.status === "denied" && (
                 <p className="text-red-500">

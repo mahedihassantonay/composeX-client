@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AddClass = () => {
   const { user } = useAuth();
@@ -36,7 +35,7 @@ const AddClass = () => {
   };
   return (
     <div className="w-full text-center">
-      <h1 className="text-3xl font-bold">Create a New Class</h1>
+      <h1 className="text-3xl font-bold my-12">Create a New Class</h1>
       <div className=" px-10">
         <form onSubmit={handleSubmit(onSubmit)}>
           {/* category */}

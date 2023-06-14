@@ -37,7 +37,7 @@ const handleSignOut = () => {
         {menuList}
       </ul>
     </div>
-    <img src={logo}  className="btn btn-ghost normal-case text-xl h-16 font-bold" />
+    <img src={logo}  className="btn btn-ghost normal-cas text-xl h-20 font-bold" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-gray-300  font-semibold">
