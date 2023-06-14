@@ -2,12 +2,15 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
+import { AiFillEye } from "react-icons/ai";
 
 const Login = () => {
     const {signIn, signInWithGoogle} = useAuth()
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const location = useLocation();
+    const [showPassword, setShowPassword] = useState(false);
+
 
     const from = location.state?.from?.pathname || '/'
 
@@ -93,15 +96,25 @@ const Login = () => {
                 </label>
                 <input
                   // onChange={e=> setPassword(e.target.value)}
-                  type="password"
+                  type={showPassword ? "text" : "password"}
+
                   placeholder="password"
                   className="input input-bordered"
                   {...register("password", {
                     required: true,
                 
                   })}
-                  required
+                  
+                  
                 />
+                <button
+                    type="button"
+                    className="ml-auto  btn btn-outline -my-16"
+                    onClick={() => setShowPassword(!showPassword)}
+                  >
+                    <AiFillEye size={24} />
+                  </button>
+                 
                 {error && (
                   <p className="text-red-500">Email/password is invalid</p>
                 )}
@@ -109,11 +122,12 @@ const Login = () => {
                
               </div>
 
-              <div className="form-control mt-6">
+              <div className="form-control mt-24">
                 <input
                   type="submit"
                   value="Login"
                   className="btn bg-black text-white hover:text-black"
+                  
                 />
               </div>
             </form>
