@@ -1,4 +1,3 @@
-import { LottiePlayer } from "lottie-react";
 import { Link, useRouteError } from "react-router-dom";
 import page404 from '../assets/page404.json'
 import Lottie from "lottie-react";

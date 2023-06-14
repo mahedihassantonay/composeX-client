@@ -8,7 +8,7 @@ const Footer = () => {
             <footer className="footer p-10 text-white container mx-auto">
   <div>
     <img src={logo} className='h-16' alt="" />
-    <p className="pl-6">ComposeX Ltd.<br/>Providing reliable Learning Platform since 2015</p>
+    <p className="lg:pl-6">ComposeX Ltd.<br/>Providing reliable Learning Platform since 2015</p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 

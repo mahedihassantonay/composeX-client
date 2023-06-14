@@ -13,12 +13,12 @@ const PopularClasses = () => {
             COURSE CATEGORIES
           </h3>
         </Slide>
-        <Fade delay={1e3} cascade damping={1e-1} className='text-4xl font-bold py-4'>
+        <Fade delay={1e3} cascade damping={1e-1} className='lg:text-4xl text-xl font-bold py-4'>
           Popular Topics To Learn
         </Fade>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 my-8">
+      <div className="grid lg:grid-cols-3 gap-4 my-8">
         {courses.map((course) => (
           <ClassesCard key={course._id} course={course} />
         ))}

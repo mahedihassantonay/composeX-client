@@ -18,13 +18,13 @@ const Features = () => {
           delay={1e3}
           cascade
           damping={1e-1}
-          className="text-4xl font-bold py-4"
+          className="lg:text-4xl text-xl font-bold py-4"
         >
           Our Core Features
         </Fade>
       </div>
-      <div className="bg flex justify-evenly gap-8 p-8 rounded-lg">
-        <div className="grid grid-cols-2 gap-8">
+      <div className="bg lg:flex  justify-evenly gap-8 p-8 rounded-lg">
+        <div className="grid lg:grid-cols-2 gap-8">
           <div>
             <img src={icon1} alt="" />
             <Fade
@@ -89,7 +89,7 @@ const Features = () => {
           </div>
         </div>
         <div className="">
-          <img className="rounded-lg" src={feature} alt="" />
+          <img className="rounded-lg mt-12 lg:-mt-1" src={feature} alt="" />
         </div>
       </div>
     </div>

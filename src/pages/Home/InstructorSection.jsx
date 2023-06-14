@@ -17,32 +17,33 @@ const InstructorSection = () => {
             COURSE CATEGORIES
           </h3>
         </Slide>
-        <Fade delay={1e3} cascade damping={1e-1} className='text-4xl font-bold py-4'>
+        <Fade delay={1e3} cascade damping={1e-1} className='text-xl lg:text-4xl font-bold py-4'>
           Meet Our Instructors
         </Fade>
       </div>
 
        <div className=" my-12">
        <Swiper
-        slidesPerView={3}
+        slidesPerView={4}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
+      
       >
         {
             courses.map(course=> (
                 <SwiperSlide key={course._id}>
-            <div className="h-96">
-            <img className="h-96" src={course.instructorImage} alt="" />
+            <div className="lg:h-96">
+            <img className="lg:h-96 h-24 md:h-48" src={course.instructorImage} alt="" />
             
-            <div className="bg-black bg-opacity-20 absolute top-0">
+            <div className="invisible lg:visible bg-black bg-opacity-20 absolute top-0">
                 <h1 className="text-white p-4 font-bold">{course.className}</h1>
             </div>
             
-            <div className="bg-black bg-opacity-20 absolute bottom-0 ">
+            <div className="invisible lg:visible bg-black bg-opacity-20 absolute bottom-0 ">
                 <h1 className="text-white p-4 font-bold">Instructor:{course.instructor}</h1>
             </div>
             </div>
