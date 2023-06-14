@@ -16,6 +16,7 @@ import PaymentHistory from "../pages/Dashboard/PaymentHistory";
 import Home from "../pages/Home/Home";
 import Instructors from "../pages/Instructors/Instructors";
 import Login from "../pages/Login";
+import Page404 from "../pages/Page404";
 import Registration from "../pages/Registration";
 import AdminRoute from "./AdminRoute";
 import InstructorRoute from "./InstructorRoute";
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <Main />,
+      errorElement: <Page404 />,
       children: [
         {
             path: '/',
