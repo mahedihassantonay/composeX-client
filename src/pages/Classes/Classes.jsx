@@ -14,6 +14,7 @@ const Classes = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  // const from = location.state?.from?.pathname || '/';
 
   useEffect(() => {
     if (user && user.email) {
