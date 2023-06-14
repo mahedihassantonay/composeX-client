@@ -15,9 +15,12 @@ const MySelectedClass = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/selectedClasses/${course._id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://server2-sepia-nine.vercel.app/selectedClasses/${course._id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -68,10 +71,10 @@ const MySelectedClass = () => {
                   >
                     Delete
                   </button>
-                  <Link to='/dashboard/classpayment'>
-                  <button className="btn bg-black text-white hover:text-black">
-                    Pay
-                  </button>
+                  <Link to="/dashboard/classpayment">
+                    <button className="btn bg-black text-white hover:text-black">
+                      Pay
+                    </button>
                   </Link>
                 </div>
               </div>

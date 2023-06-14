@@ -5,7 +5,7 @@ import useAuth from "../../hooks/useAuth";
 
 const AddClass = () => {
   const { user } = useAuth();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const {
     register,
@@ -14,7 +14,7 @@ const AddClass = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/classes", {
+    fetch("https://server2-sepia-nine.vercel.app/classes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -24,11 +24,11 @@ const AddClass = () => {
         console.log(result);
         if (result.insertedId) {
           Swal.fire(
-            'Good job!',
-            'You have successfully added a class',
-            'success'
-          )
-          navigate('/dashboard/myclasses')
+            "Good job!",
+            "You have successfully added a class",
+            "success"
+          );
+          navigate("/dashboard/myclasses");
         }
       });
     console.log(data);

@@ -18,7 +18,9 @@ const Classes = () => {
 
   useEffect(() => {
     if (user && user.email) {
-      fetch(`http://localhost:5000/selectedClasses?email=${user.email}`)
+      fetch(
+        `https://server2-sepia-nine.vercel.app/selectedClasses?email=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => {
           const selectedCourseIds = data.map((course) => course.classId);
@@ -40,7 +42,7 @@ const Classes = () => {
         instructorImage: course.instructorImage,
         seats: course.availableSeats,
       };
-      fetch("http://localhost:5000/selectedClasses", {
+      fetch("https://server2-sepia-nine.vercel.app/selectedClasses", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -64,7 +66,7 @@ const Classes = () => {
         <div
           key={course.key}
           className={`hero bg-base-200 flex flex-row ${
-            course.availableSeats === '0' ? "bg-red-500" : ""
+            course.availableSeats === "0" ? "bg-red-500" : ""
           }`}
         >
           <div className="hero-content px-12">

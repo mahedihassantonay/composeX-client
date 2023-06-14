@@ -3,52 +3,48 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const Registration = () => {
-    const {registerUser, updateUserProfile} = useAuth()
-    const navigate = useNavigate()
+  const { registerUser, updateUserProfile } = useAuth();
+  const navigate = useNavigate();
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => {
-        console.log(data);
-        registerUser(data.email, data.password)
-        .then(result=>{
-            console.log(result.user)
-            updateUserProfile(data.name, data.photoURL)
-            .then(()=>{
-              const dbUsers = {name: data.name, email:data.email}
-              fetch('http://localhost:5000/users',{
-                method: 'POST',
-                headers:{
-                  'content-type': 'application/json'
-                },
-                body: JSON.stringify(dbUsers)
-              })
-              .then(res=>res.json())
-              .then(data=>{
-                if(data.insertedId){
-                  console.log('user profile updated')
-                  navigate('/')
-                }
-              })
-              
-            })  
-            // reset
-            .catch((error) => {
-                console.log(error)
-            })
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    registerUser(data.email, data.password).then((result) => {
+      console.log(result.user);
+      updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          const dbUsers = { name: data.name, email: data.email };
+          fetch("https://server2-sepia-nine.vercel.app/users", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(dbUsers),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                console.log("user profile updated");
+                navigate("/");
+              }
+            });
         })
-      }
-    return (
-        <>
-         <div className="hero min-h-screen bg-base-200">
+        // reset
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+  };
+  return (
+    <>
+      <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex flex-col">
-          
-            <h1 className="text-5xl font-bold">Please Sign Up Here !!</h1>
-           
-          
+          <h1 className="text-5xl font-bold">Please Sign Up Here !!</h1>
+
           <div className="card  w-full shadow-2xl bg-base-100">
             {/* form */}
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -70,8 +66,8 @@ const Registration = () => {
                 )}
               </div>
 
-               {/* photo */}
-               <div className="form-control">
+              {/* photo */}
+              <div className="form-control">
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
@@ -116,7 +112,8 @@ const Registration = () => {
                     required: true,
                     minLength: 6,
                     maxLength: 20,
-                    pattern: /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d]/
+                    pattern:
+                      /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[a-zA-Z\d]/,
                   })}
                   required
                 />
@@ -128,9 +125,10 @@ const Registration = () => {
                     password must be 6 characters long
                   </p>
                 )}
-                 {errors.password?.type === "pattern" && (
+                {errors.password?.type === "pattern" && (
                   <p className="text-red-500">
-                    password must have at least one upercase letter, one special character and a number
+                    password must have at least one upercase letter, one special
+                    character and a number
                   </p>
                 )}
               </div>
@@ -154,9 +152,8 @@ const Registration = () => {
           </div>
         </div>
       </div>
-            
-        </>
-    );
+    </>
+  );
 };
 
 export default Registration;

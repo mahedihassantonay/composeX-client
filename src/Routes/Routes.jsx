@@ -84,11 +84,11 @@ const router = createBrowserRouter([
         },
         {
           path: 'addclass',
-          element: <InstructorRoute><AddClass /></InstructorRoute>
+          element: <AddClass />
         },
         {
           path: 'myclasses',
-          element: <InstructorRoute><MyClasses /></InstructorRoute>
+          element: <MyClasses />
         },
         
       ]
